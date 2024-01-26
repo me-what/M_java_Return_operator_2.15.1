@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         // 1
         int x = sum(1, 2, 3);
         int y = sum(1, 4, 9);
@@ -20,6 +20,11 @@ public class Main {
         daytime2(32);
         daytime2(56);
         daytime2(2);
+        System.out.println();
+
+        // 4
+        boolean aa = true;
+        run(aa);
     }
 
     // 1
@@ -53,5 +58,16 @@ public class Main {
             System.out.println("Good after noon");
         else
             System.out.println("Good morning");
+    }
+
+    // 4
+    public static void run(boolean a) throws InterruptedException {
+        while (a) {
+            Thread.sleep(1000);
+            System.out.println("Tik");
+
+            if (10>9)
+                return;
+        }
     }
 }
